@@ -132,6 +132,7 @@ function lib:Window(text, preset, closebind)
     Title.TextColor3 = Color3.fromRGB(68, 68, 68)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
+    Title.TextScaled = true
 
     DragFrame.Name = "DragFrame"
     DragFrame.Parent = Main
