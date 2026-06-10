@@ -187,8 +187,14 @@ function lib:Window(text, preset, closebind)
     MaximizeButton.Text = text .. "  [+]"
     MaximizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     MaximizeButton.TextSize = 13
+    MaximizeButton.TextScaled = true
     MaximizeButton.Visible = false
     MaximizeButton.ClipsDescendants = true
+
+    local MaximizeTextSizeConstraint = Instance.new("UITextSizeConstraint")
+    MaximizeTextSizeConstraint.MaxTextSize = 13
+    MaximizeTextSizeConstraint.MinTextSize = 1
+    MaximizeTextSizeConstraint.Parent = MaximizeButton
 
     local MaximizeCorner = Instance.new("UICorner")
     MaximizeCorner.CornerRadius = UDim.new(0, 6)
